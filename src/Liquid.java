@@ -1,14 +1,19 @@
-public class Liquid {
-    public double density;
-    public String name;
-    Liquid (double p, String name){
-        this.density = p;
-        this.name = name;
+import org.jetbrains.annotations.Contract;
+
+public enum Liquid{
+        Ethanol(789),
+        Water(997),
+        Gasoline(740);
+        public final double i;
+        Liquid(double i) {
+            this.i = i;
+        }
+        double returnI(){
+            return i;
+        }
+        public String nameLiquid;
+        String printname(){
+            return nameLiquid;
+        }
+
     }
-    String printStats(){
-        return name + "(" + density + " " + "кг/м^3)" ;
-    }
-    double rerutnDensity(){
-        return density;
-    }
-}

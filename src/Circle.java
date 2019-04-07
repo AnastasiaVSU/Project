@@ -1,11 +1,16 @@
-import java.util.Scanner;
-public class Circle extends Sort implements Size {
-    Scanner in = new Scanner(System.in);
-    public void V() {
-        System.out.println("Введите радиус круга: ");
-        int radius = in.nextInt();
-        System.out.println("Введите высоту ёмкости: ");
-        int H = in.nextInt();
-        System.out.println("Объем ёмкости, в основании которой круг = " +  2*PI*radius*H);
-    }
+import static java.lang.Math.PI;
+
+public class Circle extends Container {
+  Circle(double r, double H){
+      this.r = r;
+      this.H = H;
+      c = 2*PI*r*H;
+  }
+  @Override
+    public String toString(){
+      return "Радиус круга: " + r + "высота ёмкости: " + H;
+  }
 }
+
+
+

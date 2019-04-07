@@ -1,15 +1,12 @@
-import java.util.Scanner;
-
-public class Triangle extends Sort implements Size {
-    Scanner in = new Scanner(System.in);
-    public void V() {
-        System.out.println("Введите сторону треугольника: ");
-        int a = in.nextInt();
-        System.out.println("Введите высоту треугольника: ");
-        int h = in.nextInt();
-        System.out.println("Введите высоту ёмкости: ");
-        int H = in.nextInt();
-        System.out.println("Объем ёмкости, в основании которого треугольник = " + ((a*h)/2)*H);
+public class Triangle extends Container{
+    Triangle (double a, double h, double H){
+        this.a = a;
+        this.h = h;
+        this.H = H;
+        c = ((a*h)/2)*H;
     }
-
+    @Override
+     public  String toString(){
+        return "Сторона треугольника: " + a + "высота треугольника: " + h + "высота ёмкости" + H;
+    }
 }
